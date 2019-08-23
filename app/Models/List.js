@@ -3,7 +3,7 @@ export default class List {
     //and the methods needed to create the view template for this model
     constructor(data) {
         console.log("hello, from a list!")
-        this.title = data.title || "New List"
+        this.title = data.title || []
         this.item = data.item || []
     }
 
@@ -18,7 +18,7 @@ export default class List {
                 </ul>
                 <form onsubmit="app.controllers.listController.addItem(event, ${index})">
                     <div class="form-group">
-                        <label for="item">To Do:</label>
+                        <label for="item"></label>
                         <input type="text" class="form-control" name="item" placeholder="input item" required>
                     </div>
                     <button type="submit">+</button>

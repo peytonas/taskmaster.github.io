@@ -28,7 +28,7 @@ export default class ListController {
         event.preventDefault()
         let form = event.target
         let newList = {
-            name: form.title.value
+            title: form.title.value
         }
         _listService.addList(newList)
         _drawLists()
