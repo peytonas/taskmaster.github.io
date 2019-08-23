@@ -12,10 +12,10 @@ export default class List {
             `
             <div class="col-3 border border-primary">
                 <h1>${this.title}</h1>
-                <ul>`
+                <ol>`
         template += this.drawItems(index)
         template += `
-                </ul>
+                </ol>
                 <form onsubmit="app.controllers.listController.addItem(event, ${index})">
                     <div class="form-group">
                         <label for="item"></label>
