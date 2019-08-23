@@ -11,9 +11,20 @@
 </head>
 
 <body>
+    <div class="container-fluid">
+        <h1 class="text-center"> Task Master</h1>
+        <form onsubmit="app.controllers.listController.addList(event)">
+            <div class="form-group">
+                <label for="name">Create List:</label>
+                <input type="text" class="form-control" name="name" placeholder="insert list title" required>
+            </div>
+            <button class="btn btn-primary" type="submit">Submit</button>
+        </form>
+        <div id="list" class="row">
 
+        </div>
 
-    <script src="app/main.js" type="module"></script>
+        <script src="app/main.js" type="module"></script>
 </body>
 
 </html>

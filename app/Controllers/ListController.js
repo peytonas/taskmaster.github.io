@@ -5,13 +5,15 @@ let _listService = new ListService()
 
 //TODO Don't forget to render to the screen after every data change.
 function _drawLists() {
-
+    let lists = _listService.List
 }
 
 
 //Public
 export default class ListController {
     constructor() {
+        console.log("hello, from list controller!")
+        _draw()
         //NOTE: When the app first starts we want to pull any potential data out of memory
         _listService.getLists();
         //NOTE: After updating the store, we can automatically call to draw the lists.
