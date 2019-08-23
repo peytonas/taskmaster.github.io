@@ -5,7 +5,7 @@ let _listService = new ListService()
 
 //TODO Don't forget to render to the screen after every data change.
 function _drawLists() {
-    let template = ""
+    let template = ``
     let lists = _listService.List
     lists.forEach((list, index) => {
         template += list.getTemplate(index)
@@ -36,9 +36,7 @@ export default class ListController {
     addItem(event, listIndex) {
         event.preventDefault()
         let form = event.target
-        let newItem = {
-            item: form.item.value
-        }
+        let newItem = form.item.value
         _listService.addItem(newItem, listIndex)
         _drawLists()
     }

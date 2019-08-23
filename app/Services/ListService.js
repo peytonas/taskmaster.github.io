@@ -12,7 +12,7 @@ export default class ListService {
     //given the information you need in the controller, 
     //what methods will be required to support that functionality?
     deleteItem(listIndex, itemIndex) {
-        _state.lists[listIndex].items.splice(itemIndex, 1)
+        _state.lists[listIndex].item.splice(itemIndex, 1)
         this.saveLists()
     }
     deleteList(index) {
@@ -20,7 +20,7 @@ export default class ListService {
         this.saveLists()
     }
     addItem(newItem, listIndex) {
-        _state.lists[listIndex].items.push(newItem)
+        _state.lists[listIndex].item.push(newItem)
         this.saveLists()
     }
     addList(newList) {
