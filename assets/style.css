@@ -13,3 +13,9 @@
 .padding-bottom {
   padding-bottom: 15px;
 }
+
+.grid-item { width: 22%; }
+
+.gutter-sizer { width: 4%; }
+
+.grid-item--width2 { width: 48%; }
