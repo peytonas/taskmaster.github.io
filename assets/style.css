@@ -2,20 +2,26 @@
   background-color: black;
 }
 
-.button-one {
-  padding: 1px 1px;
+.text-color {
+  color: #00ff01
 }
 
-.button-two {
+.list-border {
+  border-style: solid;
+  border-color: #00ff01;
+  border-width: 3px;
+}
+
+.button-one {
   padding: 1px 1px;
+  color: #00ff01
+}
+
+.button-one:hover {
+  background-color: #00ff01;
+  color: black;
 }
 
 .padding-bottom {
   padding-bottom: 15px;
 }
-
-.grid-item { width: 22%; }
-
-.gutter-sizer { width: 4%; }
-
-.grid-item--width2 { width: 48%; }

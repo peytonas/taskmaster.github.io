@@ -10,7 +10,7 @@ export default class List {
     getTemplate(index) {
         let template =
             `
-            <div class="col-3 border border-info">
+            <div class="col-3 list-border">
                 <h1>${this.title}</h1>
                 <ol>`
         template += this.drawItems(index)
@@ -21,9 +21,9 @@ export default class List {
                         <label for="item"></label>
                         <input type="text" class="form-control" name="item" placeholder="input item" required>
                     </div>
-                    <button class="btn btn-info button-one" type="submit">add</button>
+                    <button class="btn button-one" type="submit">add</button>
                 </form>
-                <button class="btn btn-info button-two" type="submit" onclick="app.controllers.listController.deleteList(event, ${index})">x</button>
+                <button class="btn button-one" type="submit" onclick="app.controllers.listController.deleteList(event, ${index})">x</button>
                 </div>
         `
         return template
@@ -31,7 +31,7 @@ export default class List {
     drawItems(listIndex) {
         let itemTemplate = ""
         this.item.forEach((i, itemIndex) => {
-            itemTemplate += `<li>${i}<button class="btn btn-info button-one" type="submit" onclick="app.controllers.listController.deleteItem(${listIndex}, ${itemIndex})">x</button></li>`
+            itemTemplate += `<li>${i}<button class="btn button-one" type="submit" onclick="app.controllers.listController.deleteItem(${listIndex}, ${itemIndex})">x</button></li>`
         });
         return itemTemplate
     }
