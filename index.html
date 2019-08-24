@@ -10,20 +10,26 @@
     <title>TaskMaster</title>
 </head>
 
-<body>
+<body class="background-color text-white">
     <div class="container-fluid">
-        <h1 class="text-center"> Task Master</h1>
-        <form class="col-3" onsubmit="app.controllers.listController.addList(event)">
-            <div class="form-group">
-                <label for="title">Create List:</label>
-                <input type="text" class="form-control" name="title" placeholder="insert list title" required>
-            </div>
-            <button class="btn btn-primary" type="submit">Submit</button>
-        </form>
+        <div class="row justify-content-center">
+            <h1 class="text-center"><u>Task Master</u></h1>
+        </div>
+        <div class="row">
+            <form class="col-3 padding-bottom" onsubmit="app.controllers.listController.addList(event)">
+                <div class="form-group">
+                    <h2 class="col" for="title">Create List:</h2>
+                    <input type="text" class="form-control" name="title" placeholder="insert list title" required>
+                </div>
+                <button class="btn btn-info button-one" type="submit">submit</button>
+            </form>
+        </div>
+
         <div id="list" class="row">
 
         </div>
-        <script src="app/main.js" type="module"></script>
+    </div>
+    <script src="app/main.js" type="module"></script>
 </body>
 
 </html>
