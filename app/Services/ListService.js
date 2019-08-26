@@ -12,20 +12,20 @@ export default class ListService {
     //given the information you need in the controller, 
     //what methods will be required to support that functionality?
     deleteItem(listIndex, itemIndex) {
-        this.saveLists()
         let keepItem = confirm("Are you sure?")
         if (keepItem == true) {
             _state.lists[listIndex].item.splice(itemIndex, 1)
+            this.saveLists()
             return true;
         } else {
             return false;
         }
     }
     deleteList(index) {
-        this.saveLists()
         let keepList = confirm("Are you sure?")
         if (keepList == true) {
             _state.lists.splice(index, 1)
+            this.saveLists()
             return true;
         } else {
             return false;

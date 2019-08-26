@@ -40,7 +40,7 @@ export default class ListController {
         _listService.addItem(newItem, listIndex)
         _drawLists()
     }
-    deleteList(index) {
+    deleteList(event, index) {
         _listService.deleteList(index)
         _drawLists()
     }
