@@ -12,6 +12,7 @@ export default class ListService {
     //given the information you need in the controller, 
     //what methods will be required to support that functionality?
     deleteItem(listIndex, itemIndex) {
+        this.saveLists()
         let keepItem = confirm("Are you sure?")
         if (keepItem == true) {
             _state.lists[listIndex].item.splice(itemIndex, 1)
@@ -19,9 +20,9 @@ export default class ListService {
         } else {
             return false;
         }
-        this.saveLists()
     }
     deleteList(index) {
+        this.saveLists()
         let keepList = confirm("Are you sure?")
         if (keepList == true) {
             _state.lists.splice(index, 1)
@@ -29,7 +30,6 @@ export default class ListService {
         } else {
             return false;
         }
-        this.saveLists()
     }
     addItem(newItem, listIndex) {
         _state.lists[listIndex].item.push(newItem)

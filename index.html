@@ -15,10 +15,10 @@
         <div class="row justify-content-center">
             <h1 class="text-center"><u>Task Master</u></h1>
         </div>
-        <div class="row">
+        <div class="row justify-content-center align-items-center">
             <form class="col-3 padding-bottom" onsubmit="app.controllers.listController.addList(event)">
                 <div class="form-group">
-                    <h2 class="col" for="title">Create List:</h2>
+                    <h2 class="col text-center" for="title">Create List:</h2>
                     <input type="text" class="form-control" name="title" placeholder="insert list title" required>
                 </div>
                 <button class="btn button-one" type="submit">submit</button>
@@ -29,6 +29,7 @@
 
         </div>
     </div>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="app/main.js" type="module"></script>
 </body>
 
